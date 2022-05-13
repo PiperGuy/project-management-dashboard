@@ -21,7 +21,6 @@ const DroppableBoard = withDroppableComponent(Columns);
 function Board({ onCardDragEnd, onColumnDragEnd, allowAddCard }) {
 	const board = useSelector((state) => state.board.value);
 	const dispatch = useDispatch();
-	console.log({ board });
 
 	const handleOnCardDragEnd = partialRight(handleOnDragEnd, { moveCallback: moveCard, notifyCallback: onCardDragEnd });
 	const handleOnColumnDragEnd = partialRight(handleOnDragEnd, {
